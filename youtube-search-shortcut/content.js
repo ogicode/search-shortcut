@@ -1,5 +1,7 @@
+const SHORTCUT_KEY = 'm';
+
 document.addEventListener('keydown', e => {
-  if (!(e.ctrlKey && e.key === 'm')) return;
+  if (!(e.ctrlKey && e.key === SHORTCUT_KEY)) return;
   const host = location.hostname;
 
   if (host.includes('youtube.com')) {
