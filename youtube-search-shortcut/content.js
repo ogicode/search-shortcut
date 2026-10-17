@@ -11,14 +11,12 @@ document.addEventListener('keydown', e => {
   }
 
   if (host === 'github.com') {
-    const btn = document.querySelector('.header-search-button, button[data-target="qbsearch-input.inputButton"]');
-    if (!btn) return;
     e.preventDefault();
-    btn.click();
-    setTimeout(() => {
-      const s = document.querySelector('#query-builder-test');
-      if (s) s.select();
-    }, 50);
+    document.body.dispatchEvent(new KeyboardEvent('keydown', {
+      key: '/',
+      code: 'Slash',
+      bubbles: true
+    }));
   }
 
   if (host === 'keep.google.com') {
