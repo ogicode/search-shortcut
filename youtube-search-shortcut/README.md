@@ -1,6 +1,10 @@
-# YouTube Search Shortcut
+# Search Shortcut
 
-Chrome extension. Press **Ctrl+M** on any YouTube page to jump to the search bar with the old query selected.
+Chrome extension. Press **Ctrl+M** to jump to the search bar on:
+
+- YouTube (old query selected)
+- GitHub
+- Google Keep
 
 ## Install
 
@@ -10,4 +14,12 @@ Chrome extension. Press **Ctrl+M** on any YouTube page to jump to the search bar
 
 ## Change the shortcut
 
-Edit the condition in `content.js`, e.g. `e.key === 'i'` for Ctrl+I, then click reload on the extension.
+Change `SHORTCUT_KEY` at the top of `content.js`, e.g. `'i'` for Ctrl+I, then click reload on the extension.
+
+Avoid `'s'`: Ctrl+S is the browser's Save page shortcut.
+
+## Add a site
+
+1. Add the URL to `matches` in `manifest.json`
+2. Add a block for its hostname in `content.js`
+3. Reload the extension
