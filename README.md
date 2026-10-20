@@ -15,6 +15,6 @@ Chrome extension:
 
 - **Shortcut**: change `SHORTCUT_KEY` in `content.js` (avoid `'s'`, that's Save page)
 - **New site**: add its URL to `manifest.json` and a hostname block to `content.js`
-- **Keep YouTube comments**: comment out the `youtube-hide.js` block in `manifest.json` with `//`
+- **Keep YouTube comments**: comment out the `hide.js` block in `manifest.json` with `//`
 
 Reload the extension after any change.
