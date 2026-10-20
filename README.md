@@ -1,27 +1,20 @@
 # Search Shortcut
 
-Chrome extension. Press **Ctrl+M** to jump to the search bar on:
+Chrome extension:
 
-- YouTube (old query selected)
-- GitHub
-- Google Keep
+- **Ctrl+M** jumps to the search bar on YouTube, GitHub and Google Keep
+- Hides YouTube comments and recommendations (`youtube-hide.js`)
 
 ## Install
 
 1. Open `chrome://extensions`
 2. Turn on **Developer mode**
-3. Click **Load unpacked** and select this folder
+3. **Load unpacked** and select this folder
 
-## Change the shortcut
+## Customize
 
-Change `SHORTCUT_KEY` at the top of `content.js`, e.g. `'i'` for Ctrl+I, then click reload on the extension.
+- **Shortcut**: change `SHORTCUT_KEY` in `content.js` (avoid `'s'`, that's Save page)
+- **New site**: add its URL to `manifest.json` and a hostname block to `content.js`
+- **Keep YouTube comments**: comment out the `youtube-hide.js` block in `manifest.json` with `//`
 
-Avoid `'s'`: Ctrl+S is the browser's Save page shortcut.
-
-## Add a site
-
-1. Add the URL to `matches` in `manifest.json`
-2. Add a block for its hostname in `content.js`
-3. Reload the extension
-
-Also hides youtube comments and video recomendations. You can comment it out in manifest.json.
+Reload the extension after any change.
