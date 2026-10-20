@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Search Shortcut",
   "version": "1.0.0",
-  "description": "Press Ctrl+M on YouTube, GitHub, Google Keep to jump to the search bar.",
+  "description": "Press Ctrl+M on YouTube, GitHub, Google Keep to jump to the search bar. Hides YouTube comments and recommendations.",
   "content_scripts": [
     {
       "matches": [
@@ -12,6 +12,11 @@
       ],
       "js": ["content.js"],
       "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["hide.js"],
+      "run_at": "document_start"
     }
   ]
 }
