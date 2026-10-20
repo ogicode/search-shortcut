@@ -23,3 +23,5 @@ Avoid `'s'`: Ctrl+S is the browser's Save page shortcut.
 1. Add the URL to `matches` in `manifest.json`
 2. Add a block for its hostname in `content.js`
 3. Reload the extension
+
+Also hides youtube comments and video recomendations. You can comment it out in manifest.json.
